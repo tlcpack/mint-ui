@@ -1,5 +1,7 @@
 # mint-todo
 
+Vue and Mint UI tutorial from https://blog.logrocket.com/building-mobile-ui-using-mint-ui-vue-js/
+
 ## Project setup
 ```
 yarn install

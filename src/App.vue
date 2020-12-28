@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <Todos />
+    <Todos v-bind="todos" v-on:delete="deleteTodo"/>
+    <AddTodo v-on:add-todo="addTodo"/>
   </div>
 </template>
 
 <script>
 import Todos from './components/Todos';
+import AddTodo from './components/AddTodo';
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    Todos
+    Todos,
+    AddTodo
   },
   data() {
     return {
@@ -43,6 +46,14 @@ export default {
       ]
     }
   },
+  methods: {
+    addTodo(newTodoObj) {
+      this.todos = [...this.todos, newTodoObj];
+    },
+    deleteTodo(todoId) {
+      this.todos = this.todos.filter(todo => todo.id !== todoId);
+    }
+  }
 }
 </script>
 

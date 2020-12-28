@@ -1,7 +1,7 @@
 <template>
   <div>
     <mt-header fixed title="Todo List"></mt-header>
-    <mt-index-list>
+    <mt-index-list :show-indicator=false height=500>
       <mt-index-section v-bind:key="todo.id" v-for="todo in todos">
         <Todo
           v-bind:todo="todo"

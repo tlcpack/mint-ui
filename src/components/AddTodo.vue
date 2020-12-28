@@ -2,7 +2,7 @@
     <div>
         <form @submit="addTodo">
             <mt-field label="To do" placeholder="What do you want to do?" type="textarea" rows="2" v-model="title" name="title"></mt-field>
-            <mt-button size="large">Add</mt-button>
+            <mt-button type="default" size="large">Add</mt-button>
         </form>
     </div>
 </template>

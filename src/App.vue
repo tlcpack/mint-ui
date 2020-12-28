@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Todos v-bind="todos" v-on:delete="deleteTodo"/>
+    <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo"/>
     <AddTodo v-on:add-todo="addTodo"/>
   </div>
 </template>
